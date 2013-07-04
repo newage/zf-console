@@ -1,9 +1,8 @@
-
-## Web console for Zend Framework 1
+### Web console for Zend Framework 1
 
 # Setup
 
-## Composer properties
+### Composer properties
 
 ```
 {
@@ -13,13 +12,13 @@
     "repositories": [
          {
             "type": "vcs",
-            "url":  "git@bitbucket.org:newage/zf-debug.git"
+            "url":  "git@bitbucket.org:newage/zf-console.git"
         }
     ]
 }
 ```
 
-## Configuration
+### Configuration
 
 Add this parameters to you config file
 
