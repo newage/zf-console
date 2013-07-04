@@ -1,14 +1,11 @@
-zf-console
-==========
 
-Web console for Zend Framework 1
+## Web console for Zend Framework 1
 
-Setup
+# Setup
 
 ## Composer properties
 
 ```
-#!json
 {
     "require": {
         "newage/zf-debug": "1.*",
@@ -28,9 +25,6 @@ Add this parameters to you config file
 
 
 ```
-#!ini
-
-
 ; Enable plugins in ZFDebug
 resources.debug.plugins.0 = Variables
 resources.debug.plugins.1 = Memory
