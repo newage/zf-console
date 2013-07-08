@@ -1,5 +1,5 @@
 {
-    "name":"newage/zf-debug",
+    "name":"newage/zf-console",
     "version":"1.5.2",
     "require":{
         "php":">=5.3.0"
