@@ -105,12 +105,12 @@ class ZFDebug_Controller_Plugin_Debug_Plugin_Cache implements ZFDebug_Controller
         foreach ($this->_cacheBackends as $name => $backend) {
             $fillingPercentage = $backend->getFillingPercentage();
             $ids = $backend->getIds();
-            
+
             # Print full class name, backends might be custom
             $panel .= '<h4>Cache '.$name.' ('.get_class($backend).')</h4>';
             $panel .= count($ids).' Entr'.(count($ids)>1?'ies':'y').'<br />'
                     . 'Filling Percentage: '.$backend->getFillingPercentage().'%<br />';
-            
+
             $cacheSize = 0;
             foreach ($ids as $id)
             {
@@ -120,9 +120,10 @@ class ZFDebug_Controller_Plugin_Debug_Plugin_Cache implements ZFDebug_Controller
                     $mem_post = memory_get_usage();
                     $cacheSize += $mem_post-$mem_pre;
                     unset($cached);
-                }                
+                }
             }
-            $panel .= 'Valid Cache Size: '.round($cacheSize/1024, 1). 'K';
+            $panel .= 'Valid Cache Size: '.round($cacheSize/1024, 1). 'K<br />';
+            $panel .= '<a class="btn btn-danger btn-mini" href="/default/debug/cleanout/cache/'.$name.'">clean all records</a>';
         }
         return $panel;
     }
