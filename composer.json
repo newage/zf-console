@@ -1,6 +1,6 @@
 {
     "name":"newage/zf-console",
-    "version":"1.5.2",
+    "version":"1.6",
     "require":{
         "php":">=5.3.0"
     },
